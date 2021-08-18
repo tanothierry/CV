@@ -22,6 +22,8 @@
       <div class="col-6">
           <div class="block-left_contain">
             <div class="table_center">
+
+              <!-- details personnels -->
               <div class="drop-down">
                 <div id="dropDown" class="drop-down__button">
                   <span class="drop-down__name">Details personnels</span>
@@ -50,58 +52,153 @@
                 </form>
               </div>
 
+              <!-- Profit -->
               <div class="drop-down">
                 <div id="dropDown" class="drop-down__button">
-                  <span class="drop-down__name">Details personnels</span>
+                  <span class="drop-down__name">Profil</span>
                 </div>
                 <form class="row g-3 needs-validation" novalidate>
-                  <div class="col-md-6">
-                    <label class="form-label">Prenoms</label>
-                    <input type="text" class="form-control drop-down__form-input "  required>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Nom de famille</label>
-                    <input type="text" class="form-control drop-down__form-input" required>
-                  </div>
-                  <div class="col-md-12">
-                    <label class="form-label">Adresse e-mail</label>
-                    <input type="text" class="form-control drop-down__form-input" required>
-                  </div>
-                  <div class="col-md-6">
-                    <label  class="form-label">Adresse</label>
-                    <input type="text" class="form-control drop-down__form-input"  required>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Numero de telephone</label>
-                    <input type="text" class="form-control drop-down__form-input"  required>
+                  <div class="form-floating">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control drop-down__form-textarea" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                   </div>
                 </form>
               </div>
 
+              <!-- Formation -->
               <div class="drop-down">
                 <div id="dropDown" class="drop-down__button">
-                  <span class="drop-down__name">Details personnels</span>
+                  <span class="drop-down__name">Formation</span>
                 </div>
                 <form class="row g-3 needs-validation" novalidate>
-                  <div class="col-md-6">
-                    <label class="form-label">Prenoms</label>
+                  <div class="col-md-12">
+                    <label class="form-label">Formation</label>
                     <input type="text" class="form-control drop-down__form-input "  required>
                   </div>
                   <div class="col-md-6">
-                    <label class="form-label">Nom de famille</label>
+                    <label class="form-label">Etablissement</label>
                     <input type="text" class="form-control drop-down__form-input" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Ville</label>
+                    <input type="text" class="form-control drop-down__form-input" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Date de debut</label>
+                    <div>
+                        <div class="nativeDatePicker">
+                          <input type="month" id="month-visit" name="month-visit" class="form-control drop-down__form-input" required>
+                          <span class="validity"></span>
+                        </div>
+                        <div class="fallbackDatePicker">
+                          <div>
+                            <span>
+                              <label for="month">Mois :</label>
+                              <select id="month" name="month" class="form-control drop-down__form-input" required>
+                                <option selected>Janvier</option>
+                                <option>Février</option>
+                                <option>Mars</option>
+                                <option>Avril</option>
+                                <option>Mai</option>
+                                <option>Juin</option>
+                                <option>Juillet</option>
+                                <option>Août</option>
+                                <option>Septembre</option>
+                                <option>Octobre</option>
+                                <option>Novembre</option>
+                                <option>Décembre</option>
+                              </select>
+                            </span>
+                            <span>
+                              <label for="year">Année :</label>
+                              <select id="year" name="year">
+                              </select>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Date de fin</label>
+                    <div>
+                      <div class="nativeDatePicker">
+                        <input type="month" id="month-visit" name="month-visit" class="form-control drop-down__form-input" required>
+                        <span class="validity"></span>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-md-12">
-                    <label class="form-label">Adresse e-mail</label>
+                    <div class="">
+                      <label class="form-label">Description</label>
+                      <textarea class="form-control drop-down__form-textarea" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Experience professionnelle -->
+              <div class="drop-down">
+                <div id="dropDown" class="drop-down__button">
+                  <span class="drop-down__name">Experience professionnelle</span>
+                </div>
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-12">
+                    <label class="form-label">Poste</label>
+                    <input type="text" class="form-control drop-down__form-input "  required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Employeur</label>
                     <input type="text" class="form-control drop-down__form-input" required>
                   </div>
                   <div class="col-md-6">
-                    <label  class="form-label">Adresse</label>
-                    <input type="text" class="form-control drop-down__form-input"  required>
+                    <label class="form-label">Ville</label>
+                    <input type="text" class="form-control drop-down__form-input" required>
                   </div>
                   <div class="col-md-6">
-                    <label class="form-label">Numero de telephone</label>
-                    <input type="text" class="form-control drop-down__form-input"  required>
+                    <label class="form-label">Date de debut</label>
+                    <div>
+                        <div class="nativeDatePicker">
+                          <input type="month" id="month-visit" name="month-visit" class="form-control drop-down__form-input" required>
+                          <span class="validity"></span>
+                        </div>
+                        <div class="fallbackDatePicker">
+                          
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Date de fin</label>
+                    <div>
+                      <div class="nativeDatePicker">
+                        <input type="month" id="month-visit" name="month-visit" class="form-control drop-down__form-input" required>
+                        <span class="validity"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="">
+                      <label class="form-label">Description</label>
+                      <textarea class="form-control drop-down__form-textarea" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Competences -->
+              <div class="drop-down">
+                <div id="dropDown" class="drop-down__button">
+                  <span class="drop-down__name">Competences</span>
+                </div>
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-12">
+                    <label class="form-label">Competences</label>
+                    <input type="text" class="form-control drop-down__form-input "  required>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="col-md-12">
+                        <label class="form-label">Competences</label>
+                        <input type="range" id="vol" name="vol" min="0" max="50" class="drop-down__form-input "  required>
+                      </div>
                   </div>
                 </form>
               </div>

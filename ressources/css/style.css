@@ -454,12 +454,19 @@ opacity: 0;
 .drop-down__form-input{
   height: 4rem;
   font-size: 1.4rem;
+  width: 100%;
 }
 
 .drop-down__form-input:focus{
   outline: none;
   border: none;
 }
+
+.form-floating >.drop-down__form-textarea {
+  margin-top: 4rem;
+}
+
+
 
 
 
