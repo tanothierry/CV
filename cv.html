@@ -202,6 +202,12 @@
                   </div>
                 </form>
               </div>
+
+              <div class="input_fields_wrap">
+                <button class="add_field_button">Add More Fields</button>
+                <div><input type="text" name="mytext[]"></div>
+              
+                 </div>
             </div>
           </div>
       </div>
@@ -226,5 +232,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
     <script src="ressources/js/bootstrap.min.js"></script>
     <script src="ressources/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  ></script>
+		
+	
+	<script>
+	$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+   
+    var x = 1; //initlal text box count
+	
+	
+   $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+	
+		     //text box increment
+            $(wrapper).append('<form class="row g-3 needs-validation" novalidate><div class="col-md-12"><label class="form-label">Poste</label><input type="text" class="form-control drop-down__form-input "  required></div><div class="col-md-6"><label class="form-label">Employeur</label><input type="text" class="form-control drop-down__form-input" required></div><div class="col-md-6"><label class="form-label">Ville</label><input type="text" class="form-control drop-down__form-input" required></div><div class="col-md-6"><label class="form-label">Date de debut</label><div><div class="nativeDatePicker"><input type="month" id="month-visit" name="month-visit" class="form-control drop-down__form-input" required><span class="validity"></span></div><div class="fallbackDatePicker"></div></div></div><div class="col-md-6"><label class="form-label">Date de fin</label><div><div class="nativeDatePicker"><input type="month" id="month-visit" name="month-visit" class="form-control drop-down__form-input" required><span class="validity"></span></div></div></div><div class="col-md-12"><div class=""><label class="form-label">Description</label><textarea class="form-control drop-down__form-textarea" id="floatingTextarea2" style="height: 100px"></textarea></div></div></form>'); //add input box
+            x++; 
+	  }
+    });
+   
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+       
+		e.preventDefault(); 
+		$(this).parent('div').remove(); 
+		x--;
+    })
+});
+	
+	</script>
 </body>
 </html>
+
